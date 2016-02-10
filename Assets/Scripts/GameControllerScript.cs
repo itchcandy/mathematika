@@ -3,17 +3,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using FileHandlingNamespace;
 
 public class GameControllerScript : MonoBehaviour {
 	public GameObject[] numberList, congoImage;
 	public GameObject min, max, fakeStage, pauseButton, oops;
 	public Canvas PauseCanvas, GameOverCanvas;
-	public Text currentSumText, requiredSumText, scoreText;
+	public Text currentSumText, requiredSumText, scoreText, finalScore;
 	public bool interactivity;
 	private bool isGameOver;
 	private Vector3 minPosition, maxPosition, spawnPos;
 	private List<GameObject> sumList;
 	private int currentSum, requiredSum, score;
+	private Configuration cfg;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +23,7 @@ public class GameControllerScript : MonoBehaviour {
 		maxPosition = max.transform.position;
 		InvokeRepeating("spawnNumber", 1.0f, 1.0f);
 		currentSum = 0;
-		requiredSum = Random.Range(1, 20);
+		mathExpression();
 		sumList = new List<GameObject>();
 		fakeStage.SetActive(false);
 		PauseCanvas.enabled = false;
@@ -31,12 +33,13 @@ public class GameControllerScript : MonoBehaviour {
 		oops.SetActive(false);
 		interactivity = true;
 		isGameOver = false;
+		cfg = Settings.ReadConf();
+		Time.timeScale = 1.0f;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		currentSumText.text = currentSum.ToString();
-		requiredSumText.text = requiredSum.ToString();
 		scoreText.text = "Score " + score.ToString();
 		if(currentSum > requiredSum)
 			clearSumList();
@@ -45,6 +48,11 @@ public class GameControllerScript : MonoBehaviour {
 
 		if(Input.GetKeyDown(KeyCode.Escape))
 			togglePause();
+
+		if(cfg.isScoreHigher(score)){
+			cfg.updateHighScore(score);
+			Settings.UpdateConf(cfg);
+		}
 	}
 
 	void spawnNumber(){
@@ -90,8 +98,8 @@ public class GameControllerScript : MonoBehaviour {
 			}
 		}
 		StartCoroutine(hideCongo(1.0f));
+		mathExpression();
 		currentSum = 0;
-		requiredSum = Random.Range(1, 20);
 	}
 
 	IEnumerator hideCongo(float f){
@@ -107,6 +115,50 @@ public class GameControllerScript : MonoBehaviour {
 		oops.SetActive(false);
 	}
 
+	void mathExpression(){
+		int x = Random.Range(0,26);
+		if(x<8) numbExpression();
+		else if(x<14) subtExpression();
+		else if(x<19) addiExpression();
+		else if(x<23) diviExpression();
+		else multExpression();
+	}
+
+	void numbExpression(){
+		requiredSum = Random.Range(1, 25);
+		requiredSumText.text = requiredSum.ToString();
+	}
+
+	void addiExpression(){
+		int a = Random.Range(8, 15);
+		int b = Random.Range(0, 20-a);
+		requiredSum = a+b;
+		requiredSumText.text = a.ToString() + "+" + b.ToString();
+	}
+
+	void subtExpression(){
+		int a = Random.Range(3, 30);
+		int b = Random.Range(0, a);
+		requiredSum = a-b;
+		requiredSumText.text = a.ToString() + "-" + b.ToString();
+	}
+
+	void diviExpression(){
+		int a = Random.Range(8, 100);
+		int b = Random.Range(2, a);
+		while(a%b != 0){
+			b++;
+		}
+		requiredSum = a/b;
+		requiredSumText.text = a.ToString() + "/" + b.ToString();
+	}
+
+	void multExpression(){
+		int a = Random.Range(2, 10);
+		int b = Random.Range(2, 10);
+		requiredSum = a*b;
+		requiredSumText.text = a.ToString() + "x" + b.ToString();
+	}
 
 	public void togglePause(){
 		if(isGameOver)
@@ -129,6 +181,12 @@ public class GameControllerScript : MonoBehaviour {
 	}
 
 	public void gameOver(){
+		finalScore.text = "Your score : " + score.ToString();
+		if(cfg.isScoreHigher(score)){
+			cfg.updateHighScore(score);
+			Settings.UpdateConf(cfg);
+		}
+
 		Time.timeScale = 0.0f;
 		fakeStage.SetActive(true);
 		GameOverCanvas.enabled = true;
