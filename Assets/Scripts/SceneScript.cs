@@ -14,6 +14,10 @@ public class SceneScript : MonoBehaviour {
 	
 	}
 
+	public void ClickHome(){
+		SceneManager.LoadScene("Home");
+	}
+
 	public void ClickPlay() {
 		SceneManager.LoadScene("Arena");
 	}

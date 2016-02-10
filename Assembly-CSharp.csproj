@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackUI.cs" />
-     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GameControllerScript.cs" />
      <Compile Include="Assets\Scripts\MaskVisibility.cs" />
      <Compile Include="Assets\Scripts\SceneScript.cs" />
  <Reference Include="UnityEngine.UI">
