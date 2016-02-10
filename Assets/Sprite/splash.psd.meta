@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 562221be204cb6b49aec0a6e54dee707
+timeCreated: 1454939909
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: splash_0
+    21300002: splash_1
+    21300004: splash_2
+    21300006: splash_3
+    21300008: splash_4
+    21300010: splash_5
+    21300012: splash_6
+    21300014: splash_7
+    21300016: splash_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: splash_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 399
+        width: 267
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -86.5, y: 45.5}
+        - {x: -133.5, y: 31.5}
+        - {x: -133.5, y: -28.5}
+        - {x: -122.5, y: -45.5}
+        - {x: 123.5, y: -45.5}
+        - {x: 133.5, y: -37.5}
+        - {x: 133.5, y: 45.5}
+    - name: splash_1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 398
+        width: 158
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79, y: 48}
+        - {x: -79, y: -28}
+        - {x: -61, y: -48}
+        - {x: 32, y: -48}
+        - {x: 79, y: -25}
+        - {x: 79, y: 46}
+        - {x: 73, y: 48}
+    - name: splash_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 273
+        width: 204
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 50}
+        - {x: -102, y: 27}
+        - {x: -102, y: -41}
+        - {x: -97, y: -50}
+        - {x: 31, y: -50}
+        - {x: 45, y: -47}
+        - {x: 93, y: -35}
+        - {x: 102, y: -31}
+        - {x: 102, y: 50}
+    - name: splash_3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 275
+        width: 233
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -94.5, y: 45.5}
+        - {x: -116.5, y: 43.5}
+        - {x: -116.5, y: -45.5}
+        - {x: 116.5, y: -45.5}
+        - {x: 116.5, y: 35.5}
+        - {x: 95.5, y: 45.5}
+    - name: splash_4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 127
+        width: 230
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -90, y: 65.5}
+        - {x: -115, y: 41.5}
+        - {x: -115, y: -65.5}
+        - {x: 115, y: -65.5}
+        - {x: 115, y: 53.5}
+        - {x: 92, y: 65.5}
+    - name: splash_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 136
+        width: 230
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55, y: 56}
+        - {x: -115, y: 46}
+        - {x: -115, y: -37}
+        - {x: -63, y: -56}
+        - {x: 0, y: -56}
+        - {x: 101, y: -37}
+        - {x: 115, y: -30}
+        - {x: 115, y: 42}
+        - {x: 89, y: 56}
+    - name: splash_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 158
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: 33.5}
+        - {x: 19, y: 46.5}
+        - {x: -49, y: 46.5}
+        - {x: -79, y: 27.5}
+        - {x: -79, y: -16.5}
+        - {x: -74, y: -31.5}
+        - {x: -66, y: -46.5}
+        - {x: 71, y: -46.5}
+        - {x: 77, y: -41.5}
+        - {x: 79, y: -26.5}
+        - {x: 79, y: 28.5}
+    - name: splash_7
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 28
+        width: 52
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 41.5}
+        - {x: -26, y: -33.5}
+        - {x: -18, y: -41.5}
+        - {x: 20, y: -41.5}
+        - {x: 26, y: -40.5}
+        - {x: 26, y: 33.5}
+        - {x: 17, y: 41.5}
+    - name: splash_8
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 20
+        width: 167
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.5, y: 44.5}
+        - {x: -77.5, y: 29.5}
+        - {x: -83.5, y: 13.5}
+        - {x: -83.5, y: -32.5}
+        - {x: -66.5, y: -42.5}
+        - {x: -57.5, y: -44.5}
+        - {x: 60.5, y: -44.5}
+        - {x: 83.5, y: -38.5}
+        - {x: 83.5, y: 32.5}
+        - {x: 34.5, y: 44.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
